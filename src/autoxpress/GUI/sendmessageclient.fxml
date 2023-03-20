@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="670.0" prefWidth="1166.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoxpress.gui.SendmessageclientController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="273.0" prefHeight="683.0" prefWidth="1109.0" style="-fx-background-color: #F1F0F0; -fx-border-color: black;">
+         <children>
+            <Button fx:id="btn_msgcl" layoutX="1051.0" layoutY="619.0" mnemonicParsing="false" onAction="#sendMessagecl" prefHeight="34.0" prefWidth="43.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Send" />
+            <Label layoutX="343.0" layoutY="151.0" style="-fx-text-fill: #292855;" text="Client" />
+            <TextField fx:id="tfcontenucl" layoutX="343.0" layoutY="619.0" prefHeight="34.0" prefWidth="703.0" />
+            <Label layoutX="945.0" layoutY="151.0" style="-fx-text-fill: #292855;" text="Conducteur" />
+            <Text layoutX="34.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Envoyer message" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Symbol" size="25.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" layoutX="34.0" layoutY="151.0" maxHeight="-Infinity" prefHeight="34.0" prefWidth="284.0" style="-fx-background-color: #343434; -fx-background-radius: 50;" styleClass="search-container">
+               <children>
+                  <TextField fx:id="tfsearch_conducteur" prefHeight="34.0" prefWidth="212.0" promptText="Recherche" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="serachButton" mnemonicParsing="false" onAction="#search" prefHeight="12.0" prefWidth="55.0" style="-fx-background-radius: 50; -fx-background-color: white;" styleClass="search-container" text="search">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane layoutX="34.0" layoutY="193.0" prefHeight="451.0" prefWidth="284.0">
+               <children>
+                  <ScrollPane layoutX="-3.0" prefHeight="451.0" prefWidth="291.0">
+                     <content>
+                        <VBox fx:id="conducteurList" prefHeight="446.0" prefWidth="291.0" style="-fx-background-color: white;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <ScrollPane layoutX="345.0" layoutY="212.0" prefHeight="398.0" prefWidth="749.0">
+               <content>
+                  <VBox fx:id="tabmessagecl" prefHeight="398.0" prefWidth="748.0" style="-fx-background-color: white;" />
+               </content>
+            </ScrollPane>
+            <ComboBox fx:id="cbclient" layoutX="343.0" layoutY="175.0" onAction="#selectclient" prefWidth="150.0" style="-fx-background-color: white;" />
+            <TextField fx:id="tfdestinataire" layoutX="945.0" layoutY="174.0" />
+           
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnrec" layoutY="309.0" mnemonicParsing="false" onAction="#reclamation" prefHeight="54.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Les reclamations " />
+      <Button fx:id="btnoff" layoutX="2.0" layoutY="151.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="62.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Les offres" />
+      <Button fx:id="btnres" layoutY="247.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="62.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Les reservations" />
+      <Button fx:id="btncontrat" layoutX="1.0" layoutY="363.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="54.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Les contrats" />
+      <Button fx:id="btnuti2" layoutX="28.0" layoutY="475.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="219.0" style="-fx-text-fill: white; -fx-background-color: red; -fx-background-radius: 50;" text="Message" />
+      <Button fx:id="btnveh" layoutY="413.0" mnemonicParsing="false" onAction="#switchForm" onMouseDragOver="#click" prefHeight="62.0" prefWidth="271.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Les vehicules" />
+      <Button fx:id="btnlivr" layoutX="1.0" layoutY="198.0" mnemonicParsing="false" onAction="#btn_aff_livconducteur" prefHeight="62.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Livraison" />
+      <Button layoutX="51.0" layoutY="631.0" mnemonicParsing="false" onAction="#movetohome" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="Deconnexion" />
+   </children>
+</AnchorPane>

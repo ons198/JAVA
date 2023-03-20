@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoxpress.GUI.ReservationController">
+   <children>
+      <ImageView fx:id="image1" fitHeight="597.0" fitWidth="717.0" layoutX="126.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/cov.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="176.0" prefHeight="37.0" prefWidth="272.0" text="      Reservation" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="70.0" text="nombre de places" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="12.0" />
+         </font></Label>
+      <Label layoutX="156.0" layoutY="108.0" text="id offre" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="152.0" layoutY="179.0" text="point de depart" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="153.0" layoutY="145.0" text="id_client" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="12.0" />
+         </font></Label>
+      <Label layoutX="150.0" layoutY="249.0" text="id_conducteur" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="153.0" layoutY="212.0" text="point_arrive" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnHistorique" layoutX="13.0" layoutY="149.0" mnemonicParsing="false" onAction="#showHistorique" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="historique" textFill="#ef6363">
+         <font>
+            <Font name="Lucida Sans Demibold" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfIdOffre" layoutX="275.0" layoutY="104.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="tfPointDepart" layoutX="275.0" layoutY="175.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="tfPointArrive" layoutX="275.0" layoutY="208.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="tfIdConcucteur" layoutX="275.0" layoutY="245.0" style="-fx-background-radius: 10;" />
+      <TextField fx:id="tfNombrePlaces" layoutX="275.0" layoutY="66.0" style="-fx-background-radius: 10;" />
+      <Button fx:id="btnDelete" layoutX="13.0" layoutY="221.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="delete" textFill="#ef6363">
+         <font>
+            <Font name="Lucida Sans Demibold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnUpdate" layoutX="14.0" layoutY="266.0" mnemonicParsing="false" onAction="#updateReservation" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="update" textFill="#ef6363">
+         <font>
+            <Font name="Lucida Sans Demibold" size="13.0" />
+         </font></Button>
+      <Label layoutX="25.0" layoutY="192.0" text="id" />
+      <TextField fx:id="tfIdRes" layoutX="40.0" layoutY="188.0" prefHeight="25.0" prefWidth="63.0" style="-fx-background-radius: 10;" />
+      <Button fx:id="btnConfirmerReservation" layoutX="13.0" layoutY="104.0" mnemonicParsing="false" onAction="#confirmer" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="confirmer" textFill="#ef6363">
+         <font>
+            <Font name="Lucida Sans Demibold" size="13.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="tfIdClient" layoutX="275.0" layoutY="141.0" prefWidth="150.0" />
+      <Button fx:id="btnPayer" layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#payer" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="payer" textFill="#ef6363">
+         <font>
+            <Font name="Lucida Sans Demibold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="153.0" layoutY="284.0" text="Numero" textFill="WHITE">
+         <font>
+            <Font name="Cooper Black" size="12.0" />
+         </font></Label>
+      <TextField fx:id="numerotel" layoutX="278.0" layoutY="280.0" style="-fx-background-radius: 10;" />
+      <Button fx:id="btnmeteo" layoutX="14.0" layoutY="66.0" mnemonicParsing="false" onAction="#meteo" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="meteo" textFill="#fc6868">
+         <font>
+            <Font name="Lucida Sans Demibold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnback" layoutX="14.0" layoutY="363.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="back" textFill="#ef6363">
+         <font>
+            <Font name="Lucida Sans Demibold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

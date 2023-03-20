@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="753.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoxpress.GUI.AjouterOffreController">
+   <left>
+      <AnchorPane prefHeight="754.0" prefWidth="276.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="45.0" layoutY="134.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnrec" layoutX="-42.0" layoutY="210.0" mnemonicParsing="false" onAction="#reclamation" prefHeight="54.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Les reclamations " />
+                  <Button fx:id="btnoff" layoutX="-40.0" layoutY="52.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: red;" text="Les offres" textFill="WHITE" />
+                  <Button fx:id="btnres" layoutX="-42.0" layoutY="148.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="62.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Les reservations" />
+                  <Button fx:id="btncontrat" layoutX="-41.0" layoutY="264.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="54.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Les contrats" />
+                  <Button fx:id="btnuti2" layoutX="-14.0" layoutY="376.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="219.0" style="-fx-text-fill: white; -fx-background-color: trasparebt; -fx-background-radius: 50;" text="Message" />
+                  <Button fx:id="btnveh" layoutX="-42.0" layoutY="314.0" mnemonicParsing="false" onAction="#switchForm" onMouseDragOver="#click" prefHeight="62.0" prefWidth="271.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Les vehicules" />
+                  <Button fx:id="btnlivr" layoutX="-41.0" layoutY="99.0" mnemonicParsing="false" onAction="#btn_aff_livconducteur" prefHeight="62.0" prefWidth="271.0" style="-fx-text-fill: white; -fx-background-color: black;" text="Livraison" />
+                  <Button layoutX="9.0" layoutY="532.0" mnemonicParsing="false" onAction="#movetohome" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="Deconnexion" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tfid_offre" layoutX="271.0" layoutY="170.0" promptText="id_offre" />
+            <TextField fx:id="tfid_conducteur" layoutX="271.0" layoutY="212.0" promptText="id_conducteur" />
+            <TextField fx:id="tfdestination" layoutX="271.0" layoutY="254.0" promptText="Destination" />
+            <TextField fx:id="tfpt_depart" layoutX="271.0" layoutY="295.0" promptText="pt_depart" />
+            <TextField fx:id="tfprix" layoutX="271.0" layoutY="335.0" promptText="Prix" />
+            <Button fx:id="btncreer" layoutX="122.0" layoutY="453.0" mnemonicParsing="false" onAction="#creer_offre" prefHeight="26.0" prefWidth="126.0" text="Créer" />
+            <Button fx:id="btnmodifier" layoutX="332.0" layoutY="453.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="26.0" prefWidth="136.0" text="Modifier" />
+            <Button fx:id="SuppOffre" layoutX="542.0" layoutY="453.0" mnemonicParsing="false" onAction="#SuppOffre" prefHeight="26.0" prefWidth="129.0" text="Supprimer" />
+            <ComboBox fx:id="type_vehicule" layoutX="271.0" layoutY="377.0" prefWidth="150.0" />
+            <Label layoutX="162.0" layoutY="380.0" prefHeight="18.0" prefWidth="150.0" text="Type_vehicule" />
+            <Label layoutX="171.0" layoutY="76.0" prefHeight="66.0" prefWidth="402.0" text="  Gérer les offres" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

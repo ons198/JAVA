@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="766.0" prefWidth="1195.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoxpress.GUI.VehiculeConducteurController">
+   <children>
+      <AnchorPane layoutX="-21.0" layoutY="-2.0" prefHeight="637.0" prefWidth="1216.0" style="-fx-background-color: #292855;">
+         <children>
+            <ChoiceBox fx:id="cb_marqueV" layoutX="217.0" layoutY="150.0" prefHeight="31.0" prefWidth="186.0" />
+            <TextField fx:id="tf_Etat" layoutX="217.0" layoutY="196.0" promptText="Etat" />
+            <Label layoutX="81.0" layoutY="201.0" text="Etat" textFill="WHITE" />
+            <Label layoutX="81.0" layoutY="155.0" text="Marque" textFill="WHITE" />
+            <Label layoutX="85.0" layoutY="253.0" text="Cin Conducteur" textFill="WHITE" />
+            <TextField fx:id="tf_Cin_Conducteur" layoutX="217.0" layoutY="248.0" promptText="Cin" />
+            <Label layoutX="85.0" layoutY="308.0" text="Kilometrage" textFill="WHITE" />
+            <TextField fx:id="tf_Kilometrage" layoutX="217.0" layoutY="303.0" promptText="Kilometrage" />
+            <Label layoutX="84.0" layoutY="382.0" text="Image" textFill="WHITE" />
+            <TextField fx:id="tf_ImageV" layoutX="164.0" layoutY="374.0" prefHeight="31.0" prefWidth="424.0" promptText="BROWSE" />
+            <Button fx:id="browseImageV" layoutX="640.0" layoutY="376.0" mnemonicParsing="false" text="Browse" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="54.0" layoutY="46.0" text="Immatriculation" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="96.0" text="Type Du Vehicule" textFill="WHITE" />
+      <TextField fx:id="tf_Immatriculation" layoutX="194.0" layoutY="42.0" promptText="Immatriculation" />
+      <Button fx:id="btn_ajouterV" layoutX="824.0" layoutY="674.0" mnemonicParsing="false" onAction="#AjouterV" text="Ajouter" />
+      <Button fx:id="btn_modifierV" layoutX="932.0" layoutY="674.0" mnemonicParsing="false" onAction="#modifierV" text="Modifier" />
+      <Button fx:id="btn_SupprimerV" layoutX="1031.0" layoutY="674.0" mnemonicParsing="false" onAction="#SupprimerV" text="Supprimer" />
+      <ChoiceBox fx:id="cb_typeV" layoutX="194.0" layoutY="91.0" prefHeight="31.0" prefWidth="187.0" />
+      <Button fx:id="btnretourV" layoutX="716.0" layoutY="675.0" mnemonicParsing="false" onAction="#GoBrahimAy" text="Retour" />
+   </children>
+</AnchorPane>

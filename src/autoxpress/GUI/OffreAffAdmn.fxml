@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="773.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autoxpress.GUI.OffreAffClientController">
+   <left>
+      <AnchorPane prefHeight="774.0" prefWidth="222.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table_offres" layoutX="82.0" layoutY="193.0" prefHeight="194.0" prefWidth="453.0">
+              <columns>
+                <TableColumn fx:id="col_id_offre" prefWidth="75.0" text="id_offre" />
+                <TableColumn fx:id="col_id_conducteur" prefWidth="75.0" text="id_conducteur" />
+                  <TableColumn fx:id="col_destination" prefWidth="75.0" text="destination" />
+                  <TableColumn fx:id="col_pt_depart" prefWidth="75.0" text="pt_depart" />
+                  <TableColumn fx:id="col_prix" prefWidth="75.0" text="prix" />
+                  <TableColumn fx:id="col_type_vehiculebu" prefWidth="75.0" text="type_vehicule" />
+              </columns>
+            </TableView>
+            <Button layoutX="283.0" layoutY="135.0" mnemonicParsing="false" onAction="#afficherOffre" text="Afficher" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
